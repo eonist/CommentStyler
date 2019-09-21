@@ -1,0 +1,2 @@
+# StringSugar
+Sugar for string
