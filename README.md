@@ -1,10 +1,6 @@
 # CommentStyler
 
-A CommentStyler app
-
-### Features:
-
-- Converts JS-style code blocks to Obj-c style code blocks
+Converts JS-style code blocks to Obj-c style code blocks
 
 <img width="407" alt="img" src="convert.gif?raw=true">
 
@@ -31,3 +27,6 @@ A CommentStyler app
 ### Todo:
 
 - Figure out how to get the keyboard hi-jacking code to work in modern macOS apps
+- Cleanup and refactor
+- Add bulk feature (select folder and convert all .swift files)
+- Add cmd + alt + cmd + 8 command to activate convert call

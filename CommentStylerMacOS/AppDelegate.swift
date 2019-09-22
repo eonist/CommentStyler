@@ -27,7 +27,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       //Add menuItem to menu
       menuItem.title = "Convert comment-block"
       menuItem.action = #selector(applyStyling)
-      menuItem.keyEquivalent = "" //  ctrl + shift + 8
+//      menuItem.keyEquivalent = "" //  ctrl + shift + 8
+//      menuItem.keyEquivalent = "b"
+//      menuItem.keyEquivalentModifierMask = .init(arrayLiteral: .control) // .control.rawValue | NSEvent.ModifierFlags.option.rawValue | NSEvent.ModifierFlags.command.rawValue
       menu.addItem(menuItem)
       
       let quitMenuItem = NSMenuItem(title: "Quit", action: #selector(quitApp), keyEquivalent: "")
@@ -39,24 +41,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
  */
 extension AppDelegate {
    @objc func quitApp(){
-//      Swift.print("quitApp")
       NSApplication.shared.terminate(self)
    }
    /**
     * Apply styling
     */
    @objc func applyStyling(sender: AnyObject){
-//      Swift.print("applyStyling")
       Utils.copySelectedText()
-      Utils.pauseForAMoment()//so that the copy selected text operation can finish
+      Utils.pauseForAMoment() // so that the copy selected text operation can finish
       guard let clipboardText:String = ClipboardParser.getString() else { Swift.print("⚠️️ didn't work ⚠️️"); return }
-//      Swift.print("clipboardText:  \(clipboardText)")
       let convertedString: String = convert(str: clipboardText)
-//      Swift.print("convertedString:  \(convertedString)")
       ClipboardModifier.setString(string: convertedString)
       Utils.pasteSelectedText()
    }
-   
 }
 /**
  * Helper code to manipulate selected string
@@ -66,7 +63,6 @@ private class Utils{
     * x = 0x07 (if you want to do cut instead of copy)
     */
    static func copySelectedText(){
-//      Swift.print("copySelectedText")
       let src:CGEventSource = CGEventSource(stateID: CGEventSourceStateID(rawValue: CGEventSourceStateID.hidSystemState.rawValue/*kCGEventSourceStateHIDSystemState*/)!)!
       
       let cmdd = CGEvent(keyboardEventSource: src, virtualKey: 0x38, keyDown: true)//0x08 is the "cmd" char
@@ -85,10 +81,9 @@ private class Utils{
       cmdu?.post(tap: loc)//CGEventPost(loc, cmdu)
    }
    /**
-    *
+    * Paste
     */
    static func pasteSelectedText(){
-//      Swift.print("pasteSelectedText")
       let src:CGEventSource = CGEventSource(stateID: CGEventSourceStateID(rawValue: CGEventSourceStateID.hidSystemState.rawValue/*kCGEventSourceStateHIDSystemState*/)!)!
       
       let cmdd = CGEvent(keyboardEventSource: src, virtualKey: 0x38, keyDown: true)//0x08 is the "cmd" char
@@ -121,7 +116,7 @@ extension AppDelegate {
       let opening: String = "(\\/\\*\\*)" + "(?:\\s*?)" // aka: /** + whitespace
       let middle: String = "((?:.|\\s)*?)"
       let closing: String = "(?:\\s*?)" + "(\\*\\/)" // aka: whitespace + */
-      return /*"^" + */opening + middle + closing/* + "$"*/
+      return opening + middle + closing
    }()
    /**
     * Converts /***/ to /// etc

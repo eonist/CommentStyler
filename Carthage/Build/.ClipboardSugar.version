@@ -3,7 +3,7 @@
   "Mac" : [
     {
       "name" : "ClipboardSugar_macOS",
-      "hash" : "e6a617a57f6252838097032bc9ad2ac011878a88b77ce36347c445c8c5592243",
+      "hash" : "560a7bf0cc6e2eacb33c29db351b738eaec6077c046926d11e695df68b1af8f4",
       "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]

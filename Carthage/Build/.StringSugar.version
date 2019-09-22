@@ -3,7 +3,7 @@
   "Mac" : [
     {
       "name" : "StringSugarMacOS",
-      "hash" : "a911eedde2e70de70842e85eb35f32cc81c84226153021eaaa5dccc1f3d2fdef",
+      "hash" : "113d6402a064234aa10b03227bb3d75e5f1fd6626ed52840ee2282e6fafe43cd",
       "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]
