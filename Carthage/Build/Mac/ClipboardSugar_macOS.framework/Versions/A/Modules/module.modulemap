@@ -1,0 +1,11 @@
+framework module ClipboardSugar_macOS {
+  umbrella header "ClipboardSugar_macOS.h"
+
+  export *
+  module * { export * }
+}
+
+module ClipboardSugar_macOS.Swift {
+    header "ClipboardSugar_macOS-Swift.h"
+    requires objc
+}

@@ -29,6 +29,8 @@
 		F163AF522337ED5A003F10D9 /* RegExSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F163AF532337ED5A003F10D9 /* StringSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */; };
 		F163AF542337ED5A003F10D9 /* StringSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF602337F52D003F10D9 /* ClipboardSugar_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */; };
+		F163AF612337F52D003F10D9 /* ClipboardSugar_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +58,7 @@
 				F163AF4E2337ED5A003F10D9 /* RangeSugarMacOS.framework in Embed Frameworks */,
 				F163AF542337ED5A003F10D9 /* StringSugarMacOS.framework in Embed Frameworks */,
 				F163AF502337ED5A003F10D9 /* ArraySugarMacOS.framework in Embed Frameworks */,
+				F163AF612337F52D003F10D9 /* ClipboardSugar_macOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 		F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArraySugarMacOS.framework; path = Carthage/Build/Mac/ArraySugarMacOS.framework; sourceTree = "<group>"; };
 		F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegExSugarMacOS.framework; path = Carthage/Build/Mac/RegExSugarMacOS.framework; sourceTree = "<group>"; };
 		F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringSugarMacOS.framework; path = Carthage/Build/Mac/StringSugarMacOS.framework; sourceTree = "<group>"; };
+		F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClipboardSugar_macOS.framework; path = Carthage/Build/Mac/ClipboardSugar_macOS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				F163AF4D2337ED5A003F10D9 /* RangeSugarMacOS.framework in Frameworks */,
 				F163AF532337ED5A003F10D9 /* StringSugarMacOS.framework in Frameworks */,
 				F163AF4F2337ED5A003F10D9 /* ArraySugarMacOS.framework in Frameworks */,
+				F163AF602337F52D003F10D9 /* ClipboardSugar_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +118,7 @@
 		9D10A2FC2332332A00513EF4 = {
 			isa = PBXGroup;
 			children = (
+				F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */,
 				F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */,
 				F163AF492337ED59003F10D9 /* RangeSugarMacOS.framework */,
 				F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */,

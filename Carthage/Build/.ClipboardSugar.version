@@ -1,0 +1,10 @@
+{
+  "commitish" : "30a7ca96aa0347d2eea917b83425799405c1da50",
+  "Mac" : [
+    {
+      "name" : "ClipboardSugar_macOS",
+      "hash" : "e6a617a57f6252838097032bc9ad2ac011878a88b77ce36347c445c8c5592243",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+    }
+  ]
+}

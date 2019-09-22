@@ -1,3 +1,4 @@
 github "eonist/RegExSugar" "master"
 github "eonist/StringSugar" "master"
 github "eonist/ArraySugar" "master"
+github "eonist/ClipboardSugar" "master"

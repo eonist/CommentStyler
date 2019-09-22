@@ -1,4 +1,5 @@
 github "eonist/ArraySugar" "872ce5ab82abc4d99b6bcd05f2137458061341a7"
+github "eonist/ClipboardSugar" "30a7ca96aa0347d2eea917b83425799405c1da50"
 github "eonist/RangeSugar" "b55e0eff6f753359fc7be5cb89537441e4431786"
 github "eonist/RegExSugar" "35d100577883a67ce1ba5c4c660bccf45d996e3b"
 github "eonist/StringSugar" "12c2ca4fc02e69376823e3bc9f22a790acc1e51a"
