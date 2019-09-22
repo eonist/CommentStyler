@@ -1,8 +1,6 @@
 import Cocoa
 import ClipboardSugar_macOS
 import RegExSugarMacOS
-import ArraySugarMacOS
-import StringSugarMacOS
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

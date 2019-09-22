@@ -24,6 +24,10 @@ Converts JS-style code blocks to Obj-c style code blocks
 2. click the convert-comment-block button
 3. paste the code
 
+### Dependencies:
+- [RegExSugar](https://github.com/eonist/RegExSugar)
+- [ClipboardSugar](https://github.com/eonist/ClipboardSugar)
+
 ### Todo:
 
 - Figure out how to get the keyboard hi-jacking code to work in modern macOS apps
