@@ -11,11 +11,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    var statusBarItem : NSStatusItem = NSStatusItem()
    var menu: NSMenu = NSMenu()
    var menuItem : NSMenuItem = NSMenuItem()
-
+   /**
+    * - Fixme: ⚠️️ use With
+    */
    func applicationDidFinishLaunching(_ aNotification: Notification) {
-//      _ = view
       Swift.print("applicationDidFinishLaunching")
       window.close()
+      
       //Add statusBarItem
       statusBarItem = statusBar.statusItem(withLength: -1)
       statusBarItem.menu = menu
@@ -28,55 +30,43 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       menuItem.keyEquivalent = "" //  ctrl + shift + 8
       menu.addItem(menuItem)
       
-      
-//      let indexSelectedFilesMenuItem = NSMenuItem(title: "Index files", action: #selector(indexSelectedFiles), keyEquivalent: "")
-//      menu.addItem(indexSelectedFilesMenuItem)
-//
-//      let seperatorMenuItem = NSMenuItem.separator()
-//      menu.addItem(seperatorMenuItem)
-      
       let quitMenuItem = NSMenuItem(title: "Quit", action: #selector(quitApp), keyEquivalent: "")
       menu.addItem(quitMenuItem)
    }
-//   @objc func sortSelectedTasks(sender: AnyObject){
-//      Swift.print("sortSelectedTasks")
-//   }
-//   @objc func indexSelectedFiles(sender: AnyObject){
-//      Swift.print("indexSelectedFiles")
-//   }
+}
+/**
+ * Events
+ */
+extension AppDelegate {
    @objc func quitApp(){
-      Swift.print("quitApp")
+//      Swift.print("quitApp")
       NSApplication.shared.terminate(self)
    }
-
-}
-
-
-extension AppDelegate {
    /**
     * Apply styling
     */
    @objc func applyStyling(sender: AnyObject){
-      Swift.print("applyStyling")
+//      Swift.print("applyStyling")
       Utils.copySelectedText()
       Utils.pauseForAMoment()//so that the copy selected text operation can finish
       guard let clipboardText:String = ClipboardParser.getString() else { Swift.print("⚠️️ didn't work ⚠️️"); return }
-      Swift.print("clipboardText:  \(clipboardText)")
+//      Swift.print("clipboardText:  \(clipboardText)")
       let convertedString: String = convert(str: clipboardText)
-      Swift.print("convertedString:  \(convertedString)")
+//      Swift.print("convertedString:  \(convertedString)")
       ClipboardModifier.setString(string: convertedString)
       Utils.pasteSelectedText()
    }
    
 }
-
-
+/**
+ * Helper code to manipulate selected string
+ */
 private class Utils{
    /**
     * x = 0x07 (if you want to do cut instead of copy)
     */
    static func copySelectedText(){
-      Swift.print("copySelectedText")
+//      Swift.print("copySelectedText")
       let src:CGEventSource = CGEventSource(stateID: CGEventSourceStateID(rawValue: CGEventSourceStateID.hidSystemState.rawValue/*kCGEventSourceStateHIDSystemState*/)!)!
       
       let cmdd = CGEvent(keyboardEventSource: src, virtualKey: 0x38, keyDown: true)//0x08 is the "cmd" char
@@ -98,7 +88,7 @@ private class Utils{
     *
     */
    static func pasteSelectedText(){
-      Swift.print("pasteSelectedText")
+//      Swift.print("pasteSelectedText")
       let src:CGEventSource = CGEventSource(stateID: CGEventSourceStateID(rawValue: CGEventSourceStateID.hidSystemState.rawValue/*kCGEventSourceStateHIDSystemState*/)!)!
       
       let cmdd = CGEvent(keyboardEventSource: src, virtualKey: 0x38, keyDown: true)//0x08 is the "cmd" char
@@ -117,14 +107,12 @@ private class Utils{
       cmdu?.post(tap: loc)//CGEventPost(loc, cmdu)
    }
    /**
-    *
+    * pause method
     */
    static func pauseForAMoment() {
       sleep(1)
    }
-   
 }
-
 /**
  * Helper
  */
@@ -136,36 +124,20 @@ extension AppDelegate {
       return /*"^" + */opening + middle + closing/* + "$"*/
    }()
    /**
-    * Converts /**/ to /// etc
+    * Converts /***/ to /// etc
     */
    func convert(str: String) -> String{
-      let theResult: String = RegExp.replace(str: str, pattern: AppDelegate.pattern) { result in
+      return RegExp.replace(str: str, pattern: AppDelegate.pattern) { result in
          let start = result.nsRangeAndString(str, key: 1)
          let mid = result.nsRangeAndString(str, key: 2)
-         let lines: [String] = mid.match.split(separator: "\n").map { String($0) }
-         let midStr: String = "\n" + lines.reversed().map { line in
-            line.replace(pattern: "(\\*)") { [($0.range(at: 1), "///")] }
-         }.reversed().joined(separator: "\n")
+         let midStr: String = {
+            let lines: [String] = mid.match.split(separator: "\n").map { String($0) }
+            return "\n" + lines.reversed().map { line in
+               line.replace(pattern: "(\\*)") { [($0.range(at: 1), "///")] }
+               }.reversed().joined(separator: "\n")
+         }()
          let end = result.nsRangeAndString(str, key: 3)
          return [(start.range, " ///"), (mid.range, midStr), (end.range, "///")]
       }
-      return theResult
-//      Swift.print("theResult:  \(theResult)")
    }
 }
-
-//      let testStr = """
-//                        func test1() {}
-//                        /**
-//                         * Changes a string to ASCII representation ✅💪🎉🎉🎉⚠️️
-//                         * - Parameter input: the string input ✅
-//                         * - Parameter closure: the edit closure 🚫
-//                         * - Fixme: ⚠️️ Needs refactoring 🎉
-//                         */
-//                        func test2() { var a = 1 }
-//                        /**
-//                         * Another comment
-//                         */
-//                        func test3() { var b = 2 }
-//                     """
-
