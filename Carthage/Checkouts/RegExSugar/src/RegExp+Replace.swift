@@ -74,9 +74,35 @@ extension RegExp {
       RegExp.matches(str, pattern: pattern).reversed().forEach { nsCheckingResult in
          guard let replacementResult: ReplacmentResult = replace(nsCheckingResult) else { Swift.print("RegExp.replace() ⚠️️ something wrong ⚠️️ "); return }
          replacementResult.reversed().forEach {
-            str.replaceSubrange($0.range, with: $0.replacement)
+            let nsStr: NSString = str as NSString
+//            nsStr.subr
+            str = nsStr.replacingCharacters(in: $0.range, with: $0.replacement)
+//            str.replaceSubrange($0.range, with: $0.replacement)
          }
       }
       return str
    }
 }
+/**
+ * - fixme: ⚠️️ re implement strinrange with the code bellow
+ */
+//extension String {
+//   func rangeFromNSRange(nsRange : NSRange) -> Range<String.Index>? {
+//      let from16 =  advance(utf16.startIndex, nsRange.location, utf16.endIndex)
+//      let to16 =  advance(from16, nsRange.length, utf16.endIndex)
+//      if let from = String.Index(from16, within: self),
+//         let to = String.Index(to16, within: self) {
+//         return from ..< to
+//      }
+//      return nil
+//   }
+//}
+//The inverse conversion is
+//extension String {
+//   func NSRangeFromRange(range : Range<String.Index>) -> NSRange {
+//      let utf16view = self.utf16
+//      let from = String.UTF16View.Index(range.startIndex, within: utf16view)
+//      let to = String.UTF16View.Index(range.endIndex, within: utf16view)
+//      return NSMakeRange(from - utf16view.startIndex, to - from)
+//   }
+//}

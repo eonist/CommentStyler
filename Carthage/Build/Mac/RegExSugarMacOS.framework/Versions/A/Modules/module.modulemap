@@ -1,0 +1,11 @@
+framework module RegExSugarMacOS {
+  umbrella header "RegExSugarMacOS.h"
+
+  export *
+  module * { export * }
+}
+
+module RegExSugarMacOS.Swift {
+    header "RegExSugarMacOS-Swift.h"
+    requires objc
+}

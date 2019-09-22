@@ -13,9 +13,9 @@ class UnitTest: XCTestCase {
       testReplace()
       testMatches()
    }
-   func testPerformanceExample() {
-//      self.measure { }
-   }
+//   func testPerformanceExample() {
+////      self.measure { }
+//   }
 }
 extension UnitTest {
    /**
@@ -33,13 +33,13 @@ extension UnitTest {
       let string = "blue:0000FF green:00FF00 red:FF0000"
       let ptrn: String = "(\\w+?)\\:([A-Z0-9]+?)(?: |$)"
       let theResult: String = string.replace(pattern: ptrn) { result in
-         let beginning = result.stringRange(string, key: 1) // Capturing group 1
+         let beginning = result.range(at: 1) // Capturing group 1
          let newBegginingStr: String = { // Manipulate the string a bit
-            let theStr: String = .init(string[beginning])
+            let theStr: String = (string as NSString).substring(with: beginning) as String
             return theStr.uppercased()
          }()
-         let end = result.stringRange(string, key: 2) // Capturing group 2
-         let newEndStr: String = .init(string[end]) // Keep the same string
+         let end = result.range(at: 2) // Capturing group 2
+         let newEndStr: String = (string as NSString).substring(with: end) as String // Keep the same string
          return [(beginning, newBegginingStr), (end, newEndStr)]
       }
       Swift.print("theResult:  \(theResult)") // BLUE:0000FF GREEN:00FF00 RED:FF0000

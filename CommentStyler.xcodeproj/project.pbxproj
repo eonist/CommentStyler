@@ -18,6 +18,17 @@
 		9D10A3252332430600513EF4 /* StringSugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D10A31E2332430600513EF4 /* StringSugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D10A3262332430600513EF4 /* ArraySugarIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D10A31F2332430600513EF4 /* ArraySugarIOS.framework */; };
 		9D10A3272332430600513EF4 /* ArraySugarIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D10A31F2332430600513EF4 /* ArraySugarIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF182337EAF9003F10D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163AF172337EAF9003F10D9 /* AppDelegate.swift */; };
+		F163AF1A2337EAFE003F10D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163AF192337EAFE003F10D9 /* Assets.xcassets */; };
+		F163AF1D2337EAFE003F10D9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F163AF1B2337EAFE003F10D9 /* MainMenu.xib */; };
+		F163AF4D2337ED5A003F10D9 /* RangeSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF492337ED59003F10D9 /* RangeSugarMacOS.framework */; };
+		F163AF4E2337ED5A003F10D9 /* RangeSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF492337ED59003F10D9 /* RangeSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF4F2337ED5A003F10D9 /* ArraySugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */; };
+		F163AF502337ED5A003F10D9 /* ArraySugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF512337ED5A003F10D9 /* RegExSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */; };
+		F163AF522337ED5A003F10D9 /* RegExSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF532337ED5A003F10D9 /* StringSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */; };
+		F163AF542337ED5A003F10D9 /* StringSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +46,20 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F163AF552337ED5A003F10D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F163AF522337ED5A003F10D9 /* RegExSugarMacOS.framework in Embed Frameworks */,
+				F163AF4E2337ED5A003F10D9 /* RangeSugarMacOS.framework in Embed Frameworks */,
+				F163AF542337ED5A003F10D9 /* StringSugarMacOS.framework in Embed Frameworks */,
+				F163AF502337ED5A003F10D9 /* ArraySugarMacOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +72,16 @@
 		9D10A31D2332430600513EF4 /* RangeSugarIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RangeSugarIOS.framework; path = Carthage/Build/iOS/RangeSugarIOS.framework; sourceTree = "<group>"; };
 		9D10A31E2332430600513EF4 /* StringSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringSugar.framework; path = Carthage/Build/iOS/StringSugar.framework; sourceTree = "<group>"; };
 		9D10A31F2332430600513EF4 /* ArraySugarIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArraySugarIOS.framework; path = Carthage/Build/iOS/ArraySugarIOS.framework; sourceTree = "<group>"; };
+		F163AF152337EAF8003F10D9 /* CommentStylerMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentStylerMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163AF172337EAF9003F10D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F163AF192337EAFE003F10D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F163AF1C2337EAFE003F10D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F163AF1E2337EAFE003F10D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163AF1F2337EAFE003F10D9 /* CommentStylerMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommentStylerMacOS.entitlements; sourceTree = "<group>"; };
+		F163AF492337ED59003F10D9 /* RangeSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RangeSugarMacOS.framework; path = Carthage/Build/Mac/RangeSugarMacOS.framework; sourceTree = "<group>"; };
+		F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArraySugarMacOS.framework; path = Carthage/Build/Mac/ArraySugarMacOS.framework; sourceTree = "<group>"; };
+		F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegExSugarMacOS.framework; path = Carthage/Build/Mac/RegExSugarMacOS.framework; sourceTree = "<group>"; };
+		F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringSugarMacOS.framework; path = Carthage/Build/Mac/StringSugarMacOS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +96,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F163AF122337EAF8003F10D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF512337ED5A003F10D9 /* RegExSugarMacOS.framework in Frameworks */,
+				F163AF4D2337ED5A003F10D9 /* RangeSugarMacOS.framework in Frameworks */,
+				F163AF532337ED5A003F10D9 /* StringSugarMacOS.framework in Frameworks */,
+				F163AF4F2337ED5A003F10D9 /* ArraySugarMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9D10A2FC2332332A00513EF4 = {
 			isa = PBXGroup;
 			children = (
+				F163AF4A2337ED5A003F10D9 /* ArraySugarMacOS.framework */,
+				F163AF492337ED59003F10D9 /* RangeSugarMacOS.framework */,
+				F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */,
+				F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */,
 				9D10A31F2332430600513EF4 /* ArraySugarIOS.framework */,
 				9D10A31D2332430600513EF4 /* RangeSugarIOS.framework */,
 				9D10A31C2332430600513EF4 /* RegExSugar.framework */,
 				9D10A31E2332430600513EF4 /* StringSugar.framework */,
 				9D10A3072332332A00513EF4 /* CommentStyler */,
+				F163AF162337EAF9003F10D9 /* CommentStylerMacOS */,
 				9D10A3062332332A00513EF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9D10A3052332332A00513EF4 /* CommentStyler.app */,
+				F163AF152337EAF8003F10D9 /* CommentStylerMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +145,18 @@
 				9D10A3142332332B00513EF4 /* Info.plist */,
 			);
 			path = CommentStyler;
+			sourceTree = "<group>";
+		};
+		F163AF162337EAF9003F10D9 /* CommentStylerMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F163AF172337EAF9003F10D9 /* AppDelegate.swift */,
+				F163AF192337EAFE003F10D9 /* Assets.xcassets */,
+				F163AF1B2337EAFE003F10D9 /* MainMenu.xib */,
+				F163AF1E2337EAFE003F10D9 /* Info.plist */,
+				F163AF1F2337EAFE003F10D9 /* CommentStylerMacOS.entitlements */,
+			);
+			path = CommentStylerMacOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +180,24 @@
 			productReference = 9D10A3052332332A00513EF4 /* CommentStyler.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F163AF142337EAF8003F10D9 /* CommentStylerMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163AF222337EAFE003F10D9 /* Build configuration list for PBXNativeTarget "CommentStylerMacOS" */;
+			buildPhases = (
+				F163AF112337EAF8003F10D9 /* Sources */,
+				F163AF122337EAF8003F10D9 /* Frameworks */,
+				F163AF132337EAF8003F10D9 /* Resources */,
+				F163AF552337ED5A003F10D9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommentStylerMacOS;
+			productName = CommentStylerMacOS;
+			productReference = F163AF152337EAF8003F10D9 /* CommentStylerMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +210,9 @@
 				TargetAttributes = {
 					9D10A3042332332A00513EF4 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					F163AF142337EAF8003F10D9 = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
@@ -145,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				9D10A3042332332A00513EF4 /* CommentStyler */,
+				F163AF142337EAF8003F10D9 /* CommentStylerMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +245,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F163AF132337EAF8003F10D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF1A2337EAFE003F10D9 /* Assets.xcassets in Resources */,
+				F163AF1D2337EAFE003F10D9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -167,6 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D10A3092332332A00513EF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163AF112337EAF8003F10D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF182337EAF9003F10D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +282,14 @@
 				9D10A3122332332B00513EF4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F163AF1B2337EAFE003F10D9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F163AF1C2337EAFE003F10D9 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,6 +455,56 @@
 			};
 			name = Release;
 		};
+		F163AF202337EAFE003F10D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CommentStylerMacOS/CommentStylerMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = CommentStylerMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.CommentStylerMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F163AF212337EAFE003F10D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CommentStylerMacOS/CommentStylerMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = CommentStylerMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.CommentStylerMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -361,6 +522,15 @@
 			buildConfigurations = (
 				9D10A3182332332B00513EF4 /* Debug */,
 				9D10A3192332332B00513EF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163AF222337EAFE003F10D9 /* Build configuration list for PBXNativeTarget "CommentStylerMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163AF202337EAFE003F10D9 /* Debug */,
+				F163AF212337EAFE003F10D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

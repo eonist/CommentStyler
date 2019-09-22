@@ -1,9 +1,9 @@
 {
-  "commitish" : "7d033f401bdad7d24d0fb2cf4d0fa4192df0e99c",
-  "iOS" : [
+  "commitish" : "35d100577883a67ce1ba5c4c660bccf45d996e3b",
+  "Mac" : [
     {
-      "name" : "RegExSugar",
-      "hash" : "63dc16b7f3984a4c90a32121f9115f1fd4bcafe2d2ba28604a6b97ba6fb352a8",
+      "name" : "RegExSugarMacOS",
+      "hash" : "77305f5cd6098894ca0b8733e5a9011e1ca5ccddd84f6c30e330dc15722650e0",
       "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]

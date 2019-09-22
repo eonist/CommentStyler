@@ -9,11 +9,12 @@ extension RegExp {
     * - Note: used by NSTextCheckingResult.value(str: String, key: Int)
     * ## Examles:
     * RegExp.value(fullString, match, StatusParts.second.rawValue)
-    * - Fixme: ⚠️️ you should check if there is content in the range first, if ther eis not return nilor error
+    * - Fixme: ⚠️️ You should check if there is content in the range first, if ther eis not return nilor error
     * - Fixme: ⚠️️ Would be great if .rawValue was done inside this method, can be done with <T> possibly look at the apple docs about enumerations
     */
    public static func value(_ str: String, result: NSTextCheckingResult, key: Int) -> String {
-      return (str as NSString).substring(with: result.range(at: key))
+      let range = result.range(at: key)
+      return (str as NSString).substring(with: range)
    }
    /**
     * Finds first index of pattern in string
@@ -25,15 +26,19 @@ extension RegExp {
    /**
     * Converts NSRange -> Range<String.Index>
     */
-   public static func stringRange(str: String, range: NSRange) -> Range<String.Index> {
-      return str.index(str.startIndex, offsetBy: range.location)..<str.index(str.startIndex, offsetBy: range.location + range.length)
+   public static func stringRange(str: String, range: NSRange) -> Range<String.Index> { // (str.startIndex, offsetBy: range.location + range.length)
+      let start: String.Index = str.index(str.startIndex, offsetBy: range.location, limitedBy: str.endIndex) ?? str.endIndex
+      let end: String.Index = str.index(str.startIndex, offsetBy: range.location + range.length, limitedBy: str.endIndex) ?? str.endIndex
+      return start..<end
    }
    /**
     * Converts NSRange -> String
     */
    public static func string(str: String, range: NSRange) -> String {
-      let stringRange: Range<String.Index> = RegExp.stringRange(str: str, range: range)
-      return .init(str[stringRange]) // Fixme: ⚠️️ Might want to assert if the range exists in the array?
+//      let stringRange: Range<String.Index> = RegExp.stringRange(str: str, range: range)
+      let nsStr: NSString = str as NSString
+      return nsStr.substring(with: range) as String
+//      return .init(str[stringRange]) // Fixme: ⚠️️ Might want to assert if the range exists in the array?
    }
 }
 /**
@@ -56,9 +61,19 @@ extension NSTextCheckingResult {
    /**
     * Returns range and string
     */
-   public func rangeAndString(_ str: String, key: Int) -> RegExp.MatcherResult {
-      let stringRange: Range<String.Index> = self.stringRange(str, key: key)
-      let match: String = .init(str[stringRange]) // Fixme: ⚠️️ Might want to assert if the range exists in the array?
-      return (range: stringRange, match: match)
+//   public func rangeAndString(_ str: String, key: Int) -> RegExp.MatcherResult {
+//      let stringRange: Range<String.Index> = self.stringRange(str, key: key)
+//      let match: String = .init(str[stringRange]) // Fixme: ⚠️️ Might want to assert if the range exists in the array?
+//      return (range: stringRange, match: match)
+//   }
+   /**
+    * Returns range and string
+    * - Note: ⚠️️ We use NSRange because it works better with emojies in regex (Ref: google emoji regex swift)
+    */
+   public func nsRangeAndString(_ str: String, key: Int) -> RegExp.MatchResult {
+      //let stringRange: Range<String.Index> = self.stringRange(str, key: key)
+      let range = self.range(at: key)
+      let match: String = RegExp.string(str: str, range: range)//.init(str[stringRange]) // Fixme: ⚠️️ Might want to assert if the range exists in the array?
+      return (range: range, match: match)
    }
 }

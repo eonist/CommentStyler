@@ -1,0 +1,11 @@
+framework module RangeSugarMacOS {
+  umbrella header "RangeSugarMacOS.h"
+
+  export *
+  module * { export * }
+}
+
+module RangeSugarMacOS.Swift {
+    header "RangeSugarMacOS-Swift.h"
+    requires objc
+}

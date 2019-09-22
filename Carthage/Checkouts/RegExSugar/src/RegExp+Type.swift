@@ -11,7 +11,9 @@ extension RegExp {
  * Type
  */
 extension RegExp {
-   public typealias ReplacmentResult = [(range: Range<String.Index>, replacement: String)]
-   public typealias MatcherResult = (range: Range<String.Index>, match: String)
-   public typealias MatcherResults = [MatcherResult]
+   public typealias ReplacmentResult = [(range: NSRange/*Range<String.Index>*/, replacement: String)]
+//   public typealias MatcherResult = (range: Range<String.Index>, match: String)
+   public typealias MatchResult = (range: NSRange, match: String)
+//   public typealias MatcherResults = [MatcherResult]
+   public typealias MatchResults = [MatchResult]
 }

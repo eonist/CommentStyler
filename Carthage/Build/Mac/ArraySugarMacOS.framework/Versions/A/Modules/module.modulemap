@@ -1,0 +1,11 @@
+framework module ArraySugarMacOS {
+  umbrella header "ArraySugarMacOS.h"
+
+  export *
+  module * { export * }
+}
+
+module ArraySugarMacOS.Swift {
+    header "ArraySugarMacOS-Swift.h"
+    requires objc
+}

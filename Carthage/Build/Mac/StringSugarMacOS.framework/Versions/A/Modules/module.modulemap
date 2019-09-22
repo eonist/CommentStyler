@@ -1,0 +1,11 @@
+framework module StringSugarMacOS {
+  umbrella header "StringSugarMacOS.h"
+
+  export *
+  module * { export * }
+}
+
+module StringSugarMacOS.Swift {
+    header "StringSugarMacOS-Swift.h"
+    requires objc
+}

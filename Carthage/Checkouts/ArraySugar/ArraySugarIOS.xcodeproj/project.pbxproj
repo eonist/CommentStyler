@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F163AF2C2337EB6B003F10D9 /* ArraySugarMacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F163AF2A2337EB6B003F10D9 /* ArraySugarMacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F163AF302337EB7E003F10D9 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BDE22D47BBF008F842A /* ArrayExtension.swift */; };
+		F163AF312337EB7E003F10D9 /* ArrayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BDF22D47BBF008F842A /* ArrayModifier.swift */; };
+		F163AF322337EB7E003F10D9 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BE122D47BBF008F842A /* BinarySearch.swift */; };
+		F163AF332337EB7E003F10D9 /* AdvanceArrayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BE322D47BBF008F842A /* AdvanceArrayModifier.swift */; };
+		F163AF342337EB7E003F10D9 /* AdvanceArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BE422D47BBF008F842A /* AdvanceArrayParser.swift */; };
+		F163AF352337EB7E003F10D9 /* ArrayAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BE522D47BBF008F842A /* ArrayAsserter.swift */; };
+		F163AF362337EB7E003F10D9 /* ArrayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BE622D47BBF008F842A /* ArrayParser.swift */; };
+		F163AF482337EC94003F10D9 /* RangeSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF472337EC94003F10D9 /* RangeSugarMacOS.framework */; };
 		F1D81BD722D47B86008F842A /* ArraySugarIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D81BD522D47B86008F842A /* ArraySugarIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1D81BE722D47BBF008F842A /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BDE22D47BBF008F842A /* ArrayExtension.swift */; };
 		F1D81BE822D47BBF008F842A /* ArrayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81BDF22D47BBF008F842A /* ArrayModifier.swift */; };
@@ -19,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F163AF282337EB6B003F10D9 /* ArraySugarMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArraySugarMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163AF2A2337EB6B003F10D9 /* ArraySugarMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArraySugarMacOS.h; sourceTree = "<group>"; };
+		F163AF2B2337EB6B003F10D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163AF472337EC94003F10D9 /* RangeSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RangeSugarMacOS.framework; path = Carthage/Build/Mac/RangeSugarMacOS.framework; sourceTree = "<group>"; };
 		F1D81BD222D47B86008F842A /* ArraySugarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArraySugarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D81BD522D47B86008F842A /* ArraySugarIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArraySugarIOS.h; sourceTree = "<group>"; };
 		F1D81BD622D47B86008F842A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +46,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F163AF252337EB6B003F10D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF482337EC94003F10D9 /* RangeSugarMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81BCF22D47B86008F842A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,11 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F163AF292337EB6B003F10D9 /* ArraySugarMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F163AF2A2337EB6B003F10D9 /* ArraySugarMacOS.h */,
+				F163AF2B2337EB6B003F10D9 /* Info.plist */,
+			);
+			path = ArraySugarMacOS;
+			sourceTree = "<group>";
+		};
 		F1D81BC822D47B86008F842A = {
 			isa = PBXGroup;
 			children = (
 				F1D81BDD22D47BBF008F842A /* src */,
 				F1D81BD422D47B86008F842A /* ArraySugarIOS */,
+				F163AF292337EB6B003F10D9 /* ArraySugarMacOS */,
 				F1D81BD322D47B86008F842A /* Products */,
 				F1D81C1222D48AB5008F842A /* Frameworks */,
 			);
@@ -58,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F1D81BD222D47B86008F842A /* ArraySugarIOS.framework */,
+				F163AF282337EB6B003F10D9 /* ArraySugarMacOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +136,7 @@
 		F1D81C1222D48AB5008F842A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F163AF472337EC94003F10D9 /* RangeSugarMacOS.framework */,
 				F1D81C1322D48AB5008F842A /* RangeSugarIOS.framework */,
 			);
 			name = Frameworks;
@@ -112,6 +145,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		F163AF232337EB6B003F10D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF2C2337EB6B003F10D9 /* ArraySugarMacOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81BCD22D47B86008F842A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +164,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F163AF272337EB6B003F10D9 /* ArraySugarMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163AF2F2337EB6B003F10D9 /* Build configuration list for PBXNativeTarget "ArraySugarMacOS" */;
+			buildPhases = (
+				F163AF232337EB6B003F10D9 /* Headers */,
+				F163AF242337EB6B003F10D9 /* Sources */,
+				F163AF252337EB6B003F10D9 /* Frameworks */,
+				F163AF262337EB6B003F10D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArraySugarMacOS;
+			productName = ArraySugarMacOS;
+			productReference = F163AF282337EB6B003F10D9 /* ArraySugarMacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F1D81BD122D47B86008F842A /* ArraySugarIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D81BDA22D47B86008F842A /* Build configuration list for PBXNativeTarget "ArraySugarIOS" */;
@@ -151,6 +210,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
+					F163AF272337EB6B003F10D9 = {
+						CreatedOnToolsVersion = 10.2;
+					};
 					F1D81BD122D47B86008F842A = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -169,11 +231,19 @@
 			projectRoot = "";
 			targets = (
 				F1D81BD122D47B86008F842A /* ArraySugarIOS */,
+				F163AF272337EB6B003F10D9 /* ArraySugarMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F163AF262337EB6B003F10D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81BD022D47B86008F842A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +274,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F163AF242337EB6B003F10D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF352337EB7E003F10D9 /* ArrayAsserter.swift in Sources */,
+				F163AF312337EB7E003F10D9 /* ArrayModifier.swift in Sources */,
+				F163AF362337EB7E003F10D9 /* ArrayParser.swift in Sources */,
+				F163AF332337EB7E003F10D9 /* AdvanceArrayModifier.swift in Sources */,
+				F163AF302337EB7E003F10D9 /* ArrayExtension.swift in Sources */,
+				F163AF322337EB7E003F10D9 /* BinarySearch.swift in Sources */,
+				F163AF342337EB7E003F10D9 /* AdvanceArrayParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81BCE22D47B86008F842A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +305,68 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F163AF2D2337EB6B003F10D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ArraySugarMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.ArraySugarMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F163AF2E2337EB6B003F10D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ArraySugarMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.ArraySugarMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F1D81BD822D47B86008F842A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,6 +548,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F163AF2F2337EB6B003F10D9 /* Build configuration list for PBXNativeTarget "ArraySugarMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163AF2D2337EB6B003F10D9 /* Debug */,
+				F163AF2E2337EB6B003F10D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1D81BCC22D47B86008F842A /* Build configuration list for PBXProject "ArraySugarIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

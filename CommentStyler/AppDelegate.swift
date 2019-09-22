@@ -30,8 +30,10 @@ class MainVC: UIViewController {
 class MainView: UIView {
    override init(frame: CGRect) {
       super.init(frame: frame)
-      test1()
+//      test1()
 //      test2()
+      test3()
+//      test4()
    }
    /**
     * Boilerplate
@@ -41,6 +43,57 @@ class MainView: UIView {
    }
 }
 extension MainView {
+   /**
+    *
+    */
+   func test4() {
+      let testStr: String = "abc 💪✅🎉✅🚫✅✅✅✅44"
+      let theMatch: [String] = testStr.matches(pattern: "^(.*?$)") {
+         return $0.rangeAndString(testStr, key: 1).match
+      }
+      Swift.print("theMatch:  \(theMatch)")
+   }
+   /**
+    * Test3
+    */
+   func test3() {
+      let testStr = """
+                        func test1() {}
+                        /**
+                         * Changes a string to ASCII representation ✅💪🎉🎉🎉⚠️️
+                         * - Parameter input: the string input ✅
+                         * - Parameter closure: the edit closure 🚫
+                         * - Fixme: ⚠️️ Needs refactoring 🎉
+                         */
+                        func test2() { var a = 1 }
+                        /**
+                         * Another comment
+                         */
+                        func test3() { var b = 2 }
+                     """
+      let pattern: String = {
+         let opening: String = "(\\/\\*\\*)" + "(?:\\s*?)" // aka: /** + whitespace
+         let middle: String = "((?:.|\\s)*?)"
+         let closing: String = "(?:\\s*?)" + "(\\*\\/)" // aka: whitespace + */
+         return /*"^" + */opening + middle + closing/* + "$"*/
+      }()
+      let theResult: String = RegExp.replace(str: testStr, pattern: pattern) { result in
+         let start = result.nsRangeAndString(testStr, key: 1)
+         let mid = result.nsRangeAndString(testStr, key: 2)
+         let lines: [String] = mid.match.split(separator: "\n").map { String($0) }
+         let midStr: String = "\n" + lines.reversed().map { line in
+            line.replace(pattern: "(\\*)") { [($0.range(at: 1), "///")] }
+         }.reversed().joined(separator: "\n")
+         let end = result.nsRangeAndString(testStr, key: 3)
+         return [(start.range, " ///"), (mid.range, midStr), (end.range, "///")]
+      }
+      Swift.print("theResult:  \(theResult)")
+      
+      // make mac app 👈
+         // convert comment-block in selection { ctrl + shift + 8 }
+      // find copy paste snippet ✅
+      // find statusbar snippet ✅
+   }
    /**
     * Test1
     */
@@ -77,28 +130,25 @@ extension MainView {
          Swift.print("string.end:  \(string.end)")
       }
       
-      // 🏀
-         // put the above into a replace method, loop backwards, replace the signs
-         // research status-bar-app
-         // research that select then copy to clipboard code, remember you have a more modern version of that in the password app
    }
+   
    /**
     * Test2 🎉
     */
    func test2() {
-      let string = "blue:0000FF green:00FF00 red:FF0000"
-      let ptrn: String = "(\\w+?)\\:([A-Z0-9]+?)(?: |$)"
-      let theResult: String = RegExp.replace(str: string, pattern: ptrn) { result in
-         let beginning = result.stringRange(string, key: 1) // Capturing group 1
-         let newBegginingStr: String = { // Manipulate the string a bit
-            let theStr: String = .init(string[beginning])
-            return theStr.uppercased()
-         }()
-         let end = result.stringRange(string, key: 2) // Capturing group 2
-         let newEndStr: String = .init(string[end]) // Keep the same string
-         return [(beginning, newBegginingStr), (end, newEndStr)]
-      }
-      Swift.print("theResult:  \(theResult)") //BLUE:0000FF GREEN:00FF00 RED:FF0000
+//      let string = "blue:0000FF green:00FF00 red:FF0000"
+//      let ptrn: String = "(\\w+?)\\:([A-Z0-9]+?)(?: |$)"
+//      let theResult: String = RegExp.replace(str: string, pattern: ptrn) { result in
+//         let beginning = result.stringRange(string, key: 1) // Capturing group 1
+//         let newBegginingStr: String = { // Manipulate the string a bit
+//            let theStr: String = .init(string[beginning])
+//            return theStr.uppercased()
+//         }()
+//         let end = result.stringRange(string, key: 2) // Capturing group 2
+//         let newEndStr: String = .init(string[end]) // Keep the same string
+//         return [(beginning, newBegginingStr), (end, newEndStr)]
+//      }
+//      Swift.print("theResult:  \(theResult)") //BLUE:0000FF GREEN:00FF00 RED:FF0000
    }
 }
 //    fatalError("\(test.test(pattern))")

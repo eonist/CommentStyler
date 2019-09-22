@@ -1,5 +1,10 @@
 import Foundation
+#if os(iOS)
 import RangeSugarIOS
+#elseif os(macOS)
+import RangeSugarMacOS
+#endif
+
 /**
  * Mutating
  * Fixme: split into extensions
@@ -8,7 +13,7 @@ extension Array {
    /**
     * convenience method
     */
-    public mutating func shift() -> Element {/**/
+    public mutating func shift() -> Element {
         return ArrayModifier.shift(&self)
     }
     /**
@@ -20,7 +25,7 @@ extension Array {
     /**
      * Convenience method
      */
-    public mutating func pushPop(_ item: Element) -> [Element] {/*convenience*/
+    public mutating func pushPop(_ item: Element) -> [Element] {
         return ArrayModifier.pushPop(&self, item)
     }
     /**
