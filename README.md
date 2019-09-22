@@ -1,6 +1,6 @@
 # CommentStyler
 
-Converts JS-style code blocks to Obj-c style code blocks
+Converts JS-style comment blocks to Obj-c style comment blocks
 
 <img width="407" alt="img" src="convert.gif?raw=true">
 
