@@ -3,8 +3,8 @@
   "iOS" : [
     {
       "name" : "ArraySugarIOS",
-      "hash" : "825721ec7e6bb0790f12f55092b3184fea193924e2c5c64c00b41e17f5069820",
-      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+      "hash" : "6d4420c648ad0fcb382ccb75839d5fb4ca402d44c1edf31f218946079a57021a",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]
 }

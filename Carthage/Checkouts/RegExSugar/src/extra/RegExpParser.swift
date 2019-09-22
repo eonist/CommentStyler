@@ -3,7 +3,7 @@ import Foundation
 public class RegExpParser {
    /**
     * Must be in the format: 12-30-1968 (mm-dd-yyyy)
-    * - NOTE: works with: "12-30-1968" and "12/30/1968" syntax
+    * - Note: works with: "12-30-1968" and "12/30/1968" syntax
     */
     enum Pattern {
         static let usDate = "(\\d\\d)[-\\/](\\d\\d)[-\\/](\\d\\d(?:\\d\\d)?)"//g
@@ -19,8 +19,8 @@ public class RegExpParser {
      * ## EXAMPLES:
      * computerDate("12-30-1968")//Output 1968/12/30
      * computerDate("12/30/1968")//Output 1968/12/30
-     * - NOTE: also supports dubble digit years by the way of the (\d\d)? subPattern
-     * - NOTE: this could be made more advance by including the posibilities for single digit months and days, but that is out of the scope of this example
+     * - Note: also supports dubble digit years by the way of the (\d\d)? subPattern
+     * - Note: this could be made more advance by including the posibilities for single digit months and days, but that is out of the scope of this example
      */
     static func computerDate(_ usDate: String) -> String {
         let pattern: String = Pattern.usDate
@@ -35,9 +35,9 @@ public class RegExpParser {
     }
     /**
      * Returns an array comprised of url protocol(s) from PARAM input
-     * - PARAM: input: a string comprised of url(s)
+     * - Parameter: input: a string comprised of url(s)
      * ## EXAMPLES: "http://www.forta.com/\n " +"https://mail.forta.com/\n " +"ftp://ftp.forta.com/\n";//http, https, ftp
-     * - NOTE: More url patterns in RegExpDescriber.url
+     * - Note: More url patterns in RegExpDescriber.url
      * - NOTE also see RegExpParser.htmlLinks
      */
     static func urlProtocol(_ input: String) -> [String] {
@@ -46,7 +46,7 @@ public class RegExpParser {
     /**
      * Returns the content between two title tags from PARAM input
      * contentBetweenTitleTags("<HEAD> <TITLE>John Forta's Homepage</TITLE> </HEAD>");//John Forta's Homepage
-     * - NOTE: For more html parsing see RegExpMatcher and RegExpModifier
+     * - Note: For more html parsing see RegExpMatcher and RegExpModifier
      */
     static func contentBetweenTitleTags(_ input: String) -> [String] {
         return input.match(Pattern.contentBetweenTitleTags)
@@ -122,9 +122,9 @@ public class RegExpParser {
     }
     /**
      * Returns all words startingWith PARAM firstCharacter subseeds with any of the characters passed through PARAM subseedingCharacters and ends with the character PARAM endCharacter
-     * - PARAM startingCharacter:
-     * - PARAM anySubseedingCharacters:
-     * - PARAM endingCharacter:
+     * - Parameter startingCharacter:
+     * - Parameter anySubseedingCharacters:
+     * - Parameter endingCharacter:
      * ## EXAMPLES:
      * wordsThatStartSubseedAndEndWith("but bat samba bit nothing bet","b","aeiou","t")//Output: but,bat,bit,bet
      */
@@ -134,7 +134,7 @@ public class RegExpParser {
     }
     /**
      * Returns all sentences after \n ("newline break") from PARAM input
-     * - NOTE: alternative pattern: /.+/s
+     * - Note: alternative pattern: /.+/s
      */
     static func sentences(_ input: String) -> [String] {
         let pattern = "^[A-z .,]" //alternative: /.+/s;//Uses the s-flag which  is:  dot matches newline
@@ -150,7 +150,7 @@ public class RegExpParser {
     }
     /**
      * Returns each html link from PARAM url
-     * - PARAM input: a string that contains an URL
+     * - Parameter input: a string that contains an URL
      * ## EXAMPLES:
      * htmlLinks("this website does searches: http://www.google.com");//http://www.google.com
      */
@@ -187,8 +187,8 @@ public class RegExpParser {
     }
    /**
     * Retuns an array comprised of objects containing a name and a value from PARAM input
-    * - PARAM input a string containing css properties
-    * ## EXAMPLES
+    * - Parameter input a string containing css properties
+    * ## Examples:
     * cssProoperties("color:blue;thickness:2;font:Helvetica;");//[{name:color,value:blue},{name:thickness,value:2},{name:font,value:helvetica}]
     */
    static func cssProperties(_ input: String) -> [(name: String, value: String)] {

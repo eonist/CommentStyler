@@ -3,43 +3,43 @@ import Foundation
 public class RegExpModifier {
     /**
      * Returns a Comment free css string
-     * - PARAM: input: a Css String such as "P{color:#00FF00;}"
+     * - Parameter: input: a Css String such as "P{color:#00FF00;}"
      */
-    static func removeComments(_ input: String) -> String {
+    public static func removeComments(_ input: String) -> String {
         return input.replace(Pattern.removeComments, "")
     }
     /**
-     * Retuns @param input with punctuation replaced by @param replacement
+     * Returns input with punctuation replaced by replacement
      */
-    static func replacePunctuation(_ input: String, replacement: String) -> String {
+    public static func replacePunctuation(_ input: String, replacement: String) -> String {
         return input.replace("[.]", replacement)
     }
     /**
-     * Returns the PARAM: input without whitespace on the left and right side
+     * Returns the input without whitespace on the left and right side
      * - Note: writing this function is not easy, check proto website for inspiration
      * - Note: StringModifier.trimWhiteSpace can also be used. could be faster
      * - Fixme: possible rewrite inspiration: test6.match(/(?<=<[tT][iI][tT][lL][eE]>).*(?=<\/[tT][iI][tT][lL][eE]>)/g))
      * - Caution: Does not work well with strings that are empty, this is a problem in the current regExp code
      */
-    static func removeWrappingWhitespace(_ input: String) -> String {
+    public static func removeWrappingWhitespace(_ input: String) -> String {
         // :Fixme: ⚠️️ the bellow is wrong , it can be (?<=^|\s)(-|\n)(?=$|\s)  // you dont need to test if there is multiple whitespaces just 1
         //⚠️️⚠️️⚠️️⚠️️ Fixme: use native firstMatch instead of the bellow line, its way faster⚠️️⚠️️⚠️️⚠️️
       return RegExp.match(input, pattern: Pattern.removeWrappingWhitespace)[0]
     }
     /**
-     * Returns @param input without the last whitespacecharcter
+     * Returns param input without the last whitespacecharcter
      * - Note: If the input has no whitespace at the end the input is returned as is
      */
-    static func removeEndingWhiteSpace(_ input: String) -> String {
+    public static func removeEndingWhiteSpace(_ input: String) -> String {
         return input.replace("\\s*?$", "")
     }
     /**
      * Returns a @param input without dubble or more whitespace
-     * - Param replacement: the single white space, can be zero whitespace aswell
+     * - Parameter replacement: the single white space, can be zero whitespace aswell
      * ## Examples:
      * singularWhitespace("       A  C  B");//Output: " A C B"
      */
-    static func singularWhitespace(_ input: String, replacement: String = " ") -> String {
+    public static func singularWhitespace(_ input: String, replacement: String = " ") -> String {
         return input.replace("\\s\\s*?(?=\\S|$)", replacement)
     }
     /**
@@ -49,12 +49,12 @@ public class RegExpModifier {
      * ## Examples:
      * "test ", "   test" , "  test  " or "test"//test
      */
-    static func removeWrappingSpaces(input: String) -> String {
+    public static func removeWrappingSpaces(input: String) -> String {
         return input.match("[^\040].*?(?=\040|$)")[0]
     }
     /**
      * Returns an html email link from @param input
-     * - param input: a string containing atleast 1 email
+     * - Parameter input: a string containing atleast 1 email
      * ## Examples:
      * emailLink("Hello, john@forta.com is my email address.");//Hello, <A HREF=mailto:john@forta.com>ben@forta.com</A> is my email address.
      */
@@ -66,7 +66,7 @@ public class RegExpModifier {
      * ## Examples :
      * replaceEmail("The following was posted by user@domain.com.", "<email>@<domain>.com")//The following was posted by <email>@<domain>.com.
      */
-    static func replaceEmail(_ input: String, replacementEmail: String) -> String {
+    public static func replaceEmail(_ input: String, replacementEmail: String) -> String {
         return input.replace(Pattern.replaceEmail, replacementEmail)
     }
     /**
@@ -74,7 +74,7 @@ public class RegExpModifier {
      * ## Examples:
      * obscureEmail("The following was posted by user@domain.com.")// The following was posted by user AT domain DOT com
      */
-    static func obscureEmail(input: String) -> String {
+    public static func obscureEmail(input: String) -> String {
         let matches = input.matches(Pattern.obscureEmail)
         let obscuredEmail: String = matches.reduce("") {
          let match: String = $1.value(input, key: 1)
@@ -89,20 +89,20 @@ public class RegExpModifier {
     }
     /**
      * Returns a telephone number conformed to (313) 555-1234 from @param input
-     * - param input: a string containing atleast 1 telephone number formated like xxx-xxx-xxxx
+     * - Parameter input: a string containing atleast 1 telephone number formated like xxx-xxx-xxxx
      * ## Examples:
      * conformUsTeleNr(313-555-1234 248-555-9999 810-555-9000);//(313) 555-1234, (248) 555-9999, (810) 555-9000
      */
-    static func conformUsTeleNr(input: String) -> String {
+    public static func conformUsTeleNr(input: String) -> String {
         return input.replace("(\\d{3})(-)(\\d{3})(-)(\\d{4})", "($1) $3-$5")
     }
     /**
      * Returns words with single quotation marks from the @param input
-     * - param input: words with dubble quotationmarks
+     * - Parameter input: words with dubble quotationmarks
      * replaces all quotion (quotation mark followed by word followed by quotation mark) into curly quotes
      *
      */
-    static func singleQuotation(input: String) -> String {
+    public static func singleQuotation(input: String) -> String {
         return input.replace("([^\"]*)", "\'$1\'")
     }
     /**
@@ -119,7 +119,7 @@ public class RegExpModifier {
      *						"</BODY>"
      * replaceContentBetween(text,"WELCOME TO MY HOMEPAGE")
      */
-    static func replaceContentBetweenHTags(_ input: String, replacement: String) -> String {
+    public static func replaceContentBetweenHTags(_ input: String, replacement: String) -> String {
         return input.replace("(<[Hh]1>)(.*?)(<\\/[Hh]1>)", replacement)
     }
 }
@@ -127,12 +127,12 @@ public class RegExpModifier {
  * Patterns
  */
 extension RegExpModifier {
-   enum Pattern {
-      static let removeComments = "\\/\\*.*?\\*\\/"
-      static let removeWrappingWhitespace = "[^\\s]+?(?<=\\b)(.|\\n)*?(?=$|\\s*?$)"
-      static let removeWrappingSpaces = "[^\040].*?(?=\040|$)"
-      static let replaceEmail = "((?:\\w|[_.\\-])+)@(?:((?:\\w|-)+)\\.)+\\w{2,4}+"
-      static let obscureEmail = "(?:\\w|[_.\\-])+@(?:(?:\\w|-)+\\.)+\\w{2,4}"
-      static let emailLink = "(\\w+[\\w\\.]*@[\\w\\.]+\\.\\w+)"
+   public enum Pattern {
+      public static let removeComments = "\\/\\*.*?\\*\\/"
+      public static let removeWrappingWhitespace = "[^\\s]+?(?<=\\b)(.|\\n)*?(?=$|\\s*?$)"
+      public static let removeWrappingSpaces = "[^\040].*?(?=\040|$)"
+      public static let replaceEmail = "((?:\\w|[_.\\-])+)@(?:((?:\\w|-)+)\\.)+\\w{2,4}+"
+      public static let obscureEmail = "(?:\\w|[_.\\-])+@(?:(?:\\w|-)+\\.)+\\w{2,4}"
+      public static let emailLink = "(\\w+[\\w\\.]*@[\\w\\.]+\\.\\w+)"
    }
 }

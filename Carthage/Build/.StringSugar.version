@@ -3,8 +3,8 @@
   "iOS" : [
     {
       "name" : "StringSugar",
-      "hash" : "de43d6ed4226a655482dcbcbfb00ade8b4c042102ddb715fd0de613402f99e59",
-      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+      "hash" : "2bba09dfb7b01f71df7120259577da79161783edaba9990fed26645773aded4c",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]
 }

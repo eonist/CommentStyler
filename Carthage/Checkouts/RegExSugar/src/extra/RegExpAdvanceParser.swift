@@ -144,7 +144,7 @@ class RegExpAdvanceParser {
     }
     /**
      * Returns the last charcter(s) after @param last
-     * - param last: the last instance of a character or characters
+     * - Parameter last: the last instance of a character or characters
      * ## Examples:
      * RegExpAdvanceParser.charactersAfterLast("lib.icon.HomeIcon","\\.")//Output: HomeIcon
      */
@@ -154,7 +154,7 @@ class RegExpAdvanceParser {
     }
     /**
      * Returns the character(s) before the @param last
-     * - param last: the last instance of a character or characters
+     * - Parameter last: the last instance of a character or characters
      * ## Examples:
      * RegExpAdvanceParser.charactersAfterLast("lib.icon.HomeIcon","\\.")//Output: lib.icon
      */

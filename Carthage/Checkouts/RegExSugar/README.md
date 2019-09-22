@@ -1,3 +1,6 @@
+
+![platform](https://img.shields.io/badge/Platform-iOS-blue.svg) ![platform](https://img.shields.io/badge/Platform-macOS-blue.svg) ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![codebeat badge](https://codebeat.co/badges/e906a5bb-cd61-468a-a8a8-fbca9723cdd5)](https://codebeat.co/projects/github-com-eonist-regexsugar-master) [![Build Status](https://travis-ci.com/eonist/RegExSugar.svg?branch=master)](https://travis-ci.com/eonist/RegExSugar)
+
 # RegExSugar
 
 - Makes parsing and modifying with RegEx easier  
@@ -16,7 +19,7 @@ RegExp.matches(str, "(\\w+?)\\:([A-Z0-9]+?)(?: |$)").forEach {
 }//Outputs: name: green, value: 00FF00...and so on
 ```
 
-### Another example: 
+### Another example:
 
 ```swift
 let str = "Serial: #YF 1942-b 12/01/17 (Scanned) 12/03/17 (Arrived) ref: 99/99/99"
@@ -34,4 +37,4 @@ matches.forEach {
 }
 ```
 
-The above was actually a challenge with [mathewsanders](https://github.com/mathewsanders)  [Mustard](https://github.com/mathewsanders/Mustard) : [Challenge](https://github.com/mathewsanders/Mustard/issues/8) 
+The above was actually a challenge with [mathewsanders](https://github.com/mathewsanders)  [Mustard](https://github.com/mathewsanders/Mustard) : [Challenge](https://github.com/mathewsanders/Mustard/issues/8)

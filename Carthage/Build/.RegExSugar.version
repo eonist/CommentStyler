@@ -1,10 +1,10 @@
 {
-  "commitish" : "8de29b41266dc64914107fafd71d7112cd5be2f0",
+  "commitish" : "7d033f401bdad7d24d0fb2cf4d0fa4192df0e99c",
   "iOS" : [
     {
       "name" : "RegExSugar",
-      "hash" : "1755fdd48f67e0495c29311320d09265fe742525eb5c10e67c3b4fcf161b7aaf",
-      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+      "hash" : "63dc16b7f3984a4c90a32121f9115f1fd4bcafe2d2ba28604a6b97ba6fb352a8",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
     }
   ]
 }

@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F163AF0923366428003F10D9 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163AF0823366428003F10D9 /* UnitTest.swift */; };
+		F163AF0B23366428003F10D9 /* RegExSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D81C5522D5FAEC008F842A /* RegExSugar.framework */; };
+		F1CD0BC52336222D00269851 /* RegExp+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BC42336222D00269851 /* RegExp+Type.swift */; };
+		F1CD0BC72336223900269851 /* RegExp+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BC62336223900269851 /* RegExp+Helper.swift */; };
+		F1CD0BCB233622FE00269851 /* RegExp+Exec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCA233622FE00269851 /* RegExp+Exec.swift */; };
+		F1CD0BCD2336235800269851 /* RegExp+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCC2336235800269851 /* RegExp+Replace.swift */; };
+		F1CD0BCF2336237100269851 /* RegExp+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCE2336237100269851 /* RegExp+Test.swift */; };
+		F1CD0BD12336238500269851 /* RegExp+Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BD02336238500269851 /* RegExp+Match.swift */; };
+		F1CD0BD22336289D00269851 /* RegExp+Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BD02336238500269851 /* RegExp+Match.swift */; };
+		F1CD0BD32336289D00269851 /* RegExp+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCE2336237100269851 /* RegExp+Test.swift */; };
+		F1CD0BD42336289D00269851 /* RegExp+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCC2336235800269851 /* RegExp+Replace.swift */; };
+		F1CD0BD52336289D00269851 /* RegExp+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BC42336222D00269851 /* RegExp+Type.swift */; };
+		F1CD0BD62336289D00269851 /* RegExp+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BC62336223900269851 /* RegExp+Helper.swift */; };
+		F1CD0BD72336289D00269851 /* RegExp+Exec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CD0BCA233622FE00269851 /* RegExp+Exec.swift */; };
 		F1D81C5A22D5FAEC008F842A /* RegExSugar.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D81C5822D5FAEC008F842A /* RegExSugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1D81C6922D5FBF4008F842A /* RegExpAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6222D5FBF4008F842A /* RegExpAsserter.swift */; };
 		F1D81C6A22D5FBF4008F842A /* RegExpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6322D5FBF4008F842A /* RegExpParser.swift */; };
@@ -14,7 +28,6 @@
 		F1D81C6C22D5FBF4008F842A /* RegExpPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6522D5FBF4008F842A /* RegExpPattern.swift */; };
 		F1D81C6D22D5FBF4008F842A /* RegExpMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6622D5FBF4008F842A /* RegExpMatch.swift */; };
 		F1D81C6E22D5FBF4008F842A /* RegExpModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6722D5FBF4008F842A /* RegExpModifier.swift */; };
-		F1D81C6F22D5FBF4008F842A /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6822D5FBF4008F842A /* RegExp.swift */; };
 		F1D81C7222D613DF008F842A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C7122D613DF008F842A /* String+Extension.swift */; };
 		F1D81C7522D6329E008F842A /* StringMatching+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C7422D6329E008F842A /* StringMatching+Parsing.swift */; };
 		F1D81C7722D6387C008F842A /* StringMatching+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C7622D6387C008F842A /* StringMatching+Assert.swift */; };
@@ -28,10 +41,28 @@
 		F1D81D2A22D74CC6008F842A /* RegExpPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6522D5FBF4008F842A /* RegExpPattern.swift */; };
 		F1D81D2B22D74CC6008F842A /* RegExpMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6622D5FBF4008F842A /* RegExpMatch.swift */; };
 		F1D81D2C22D74CC6008F842A /* RegExpModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6722D5FBF4008F842A /* RegExpModifier.swift */; };
-		F1D81D2D22D74CC6008F842A /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D81C6822D5FBF4008F842A /* RegExp.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F163AF0C23366428003F10D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1D81C4C22D5FAEC008F842A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D81C5422D5FAEC008F842A;
+			remoteInfo = RegExSugar;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F163AF0623366427003F10D9 /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163AF0823366428003F10D9 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
+		F163AF0A23366428003F10D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1CD0BC42336222D00269851 /* RegExp+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Type.swift"; sourceTree = "<group>"; };
+		F1CD0BC62336223900269851 /* RegExp+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Helper.swift"; sourceTree = "<group>"; };
+		F1CD0BCA233622FE00269851 /* RegExp+Exec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Exec.swift"; sourceTree = "<group>"; };
+		F1CD0BCC2336235800269851 /* RegExp+Replace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Replace.swift"; sourceTree = "<group>"; };
+		F1CD0BCE2336237100269851 /* RegExp+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Test.swift"; sourceTree = "<group>"; };
+		F1CD0BD02336238500269851 /* RegExp+Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegExp+Match.swift"; sourceTree = "<group>"; };
 		F1D81C5522D5FAEC008F842A /* RegExSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RegExSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D81C5822D5FAEC008F842A /* RegExSugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegExSugar.h; sourceTree = "<group>"; };
 		F1D81C5922D5FAEC008F842A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,7 +72,6 @@
 		F1D81C6522D5FBF4008F842A /* RegExpPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegExpPattern.swift; sourceTree = "<group>"; };
 		F1D81C6622D5FBF4008F842A /* RegExpMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegExpMatch.swift; sourceTree = "<group>"; };
 		F1D81C6722D5FBF4008F842A /* RegExpModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegExpModifier.swift; sourceTree = "<group>"; };
-		F1D81C6822D5FBF4008F842A /* RegExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegExp.swift; sourceTree = "<group>"; };
 		F1D81C7122D613DF008F842A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F1D81C7422D6329E008F842A /* StringMatching+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringMatching+Parsing.swift"; sourceTree = "<group>"; };
 		F1D81C7622D6387C008F842A /* StringMatching+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringMatching+Assert.swift"; sourceTree = "<group>"; };
@@ -51,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F163AF0323366427003F10D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF0B23366428003F10D9 /* RegExSugar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81C5222D5FAEC008F842A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,12 +128,22 @@
 			path = extra;
 			sourceTree = "<group>";
 		};
+		F163AF0723366428003F10D9 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F163AF0823366428003F10D9 /* UnitTest.swift */,
+				F163AF0A23366428003F10D9 /* Info.plist */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
 		F1D81C4B22D5FAEC008F842A = {
 			isa = PBXGroup;
 			children = (
 				F1D81C6022D5FBF4008F842A /* src */,
 				F1D81C5722D5FAEC008F842A /* RegExSugar */,
 				F1D81D1A22D74A9A008F842A /* RegExSugarMacOS */,
+				F163AF0723366428003F10D9 /* UnitTest */,
 				F1D81C5622D5FAEC008F842A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +153,7 @@
 			children = (
 				F1D81C5522D5FAEC008F842A /* RegExSugar.framework */,
 				F1D81D1922D74A9A008F842A /* RegExSugarMacOS.framework */,
+				F163AF0623366427003F10D9 /* UnitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +172,12 @@
 			children = (
 				F1D81C7022D613CA008F842A /* extension */,
 				9D10A31A2332351000513EF4 /* extra */,
-				F1D81C6822D5FBF4008F842A /* RegExp.swift */,
+				F1CD0BD02336238500269851 /* RegExp+Match.swift */,
+				F1CD0BCE2336237100269851 /* RegExp+Test.swift */,
+				F1CD0BCC2336235800269851 /* RegExp+Replace.swift */,
+				F1CD0BC42336222D00269851 /* RegExp+Type.swift */,
+				F1CD0BC62336223900269851 /* RegExp+Helper.swift */,
+				F1CD0BCA233622FE00269851 /* RegExp+Exec.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -168,6 +222,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F163AF0523366427003F10D9 /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163AF1023366428003F10D9 /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				F163AF0223366427003F10D9 /* Sources */,
+				F163AF0323366427003F10D9 /* Frameworks */,
+				F163AF0423366427003F10D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F163AF0D23366428003F10D9 /* PBXTargetDependency */,
+			);
+			name = UnitTest;
+			productName = UnitTest;
+			productReference = F163AF0623366427003F10D9 /* UnitTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1D81C5422D5FAEC008F842A /* RegExSugar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D81C5D22D5FAEC008F842A /* Build configuration list for PBXNativeTarget "RegExSugar" */;
@@ -212,9 +284,13 @@
 		F1D81C4C22D5FAEC008F842A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
+					F163AF0523366427003F10D9 = {
+						CreatedOnToolsVersion = 10.2;
+					};
 					F1D81C5422D5FAEC008F842A = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -237,11 +313,19 @@
 			targets = (
 				F1D81C5422D5FAEC008F842A /* RegExSugar */,
 				F1D81D1822D74A9A008F842A /* RegExSugarMacOS */,
+				F163AF0523366427003F10D9 /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F163AF0423366427003F10D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81C5322D5FAEC008F842A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,19 +380,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F163AF0223366427003F10D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163AF0923366428003F10D9 /* UnitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D81C5122D5FAEC008F842A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1D81C7222D613DF008F842A /* String+Extension.swift in Sources */,
-				F1D81C6F22D5FBF4008F842A /* RegExp.swift in Sources */,
+				F1CD0BD12336238500269851 /* RegExp+Match.swift in Sources */,
+				F1CD0BCF2336237100269851 /* RegExp+Test.swift in Sources */,
+				F1CD0BCB233622FE00269851 /* RegExp+Exec.swift in Sources */,
 				F1D81C6922D5FBF4008F842A /* RegExpAsserter.swift in Sources */,
 				F1D81C6E22D5FBF4008F842A /* RegExpModifier.swift in Sources */,
+				F1CD0BC72336223900269851 /* RegExp+Helper.swift in Sources */,
 				F1D81C6A22D5FBF4008F842A /* RegExpParser.swift in Sources */,
 				F1D81C7522D6329E008F842A /* StringMatching+Parsing.swift in Sources */,
 				F1D81C6B22D5FBF4008F842A /* RegExpAdvanceParser.swift in Sources */,
 				F1D81C6C22D5FBF4008F842A /* RegExpPattern.swift in Sources */,
+				F1CD0BCD2336235800269851 /* RegExp+Replace.swift in Sources */,
 				F1D81C6D22D5FBF4008F842A /* RegExpMatch.swift in Sources */,
+				F1CD0BC52336222D00269851 /* RegExp+Type.swift in Sources */,
 				F1D81C7722D6387C008F842A /* StringMatching+Assert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,22 +414,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CD0BD52336289D00269851 /* RegExp+Type.swift in Sources */,
 				F1D81D2522D74CC6008F842A /* StringMatching+Parsing.swift in Sources */,
 				F1D81D2422D74CC6008F842A /* String+Extension.swift in Sources */,
+				F1CD0BD32336289D00269851 /* RegExp+Test.swift in Sources */,
 				F1D81D2A22D74CC6008F842A /* RegExpPattern.swift in Sources */,
 				F1D81D2922D74CC6008F842A /* RegExpAdvanceParser.swift in Sources */,
+				F1CD0BD42336289D00269851 /* RegExp+Replace.swift in Sources */,
+				F1CD0BD72336289D00269851 /* RegExp+Exec.swift in Sources */,
+				F1CD0BD22336289D00269851 /* RegExp+Match.swift in Sources */,
+				F1CD0BD62336289D00269851 /* RegExp+Helper.swift in Sources */,
 				F1D81D2B22D74CC6008F842A /* RegExpMatch.swift in Sources */,
 				F1D81D2622D74CC6008F842A /* StringMatching+Assert.swift in Sources */,
 				F1D81D2822D74CC6008F842A /* RegExpParser.swift in Sources */,
 				F1D81D2C22D74CC6008F842A /* RegExpModifier.swift in Sources */,
-				F1D81D2D22D74CC6008F842A /* RegExp.swift in Sources */,
 				F1D81D2722D74CC6008F842A /* RegExpAsserter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F163AF0D23366428003F10D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1D81C5422D5FAEC008F842A /* RegExSugar */;
+			targetProxy = F163AF0C23366428003F10D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F163AF0E23366428003F10D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.UnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F163AF0F23366428003F10D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.UnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F1D81C5B22D5FAEC008F842A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +704,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F163AF1023366428003F10D9 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163AF0E23366428003F10D9 /* Debug */,
+				F163AF0F23366428003F10D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1D81C4F22D5FAEC008F842A /* Build configuration list for PBXProject "RegExSugar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
