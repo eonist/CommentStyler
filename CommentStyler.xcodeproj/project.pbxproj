@@ -20,6 +20,7 @@
 		F163AF542337ED5A003F10D9 /* StringSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F163AF602337F52D003F10D9 /* ClipboardSugar_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */; };
 		F163AF612337F52D003F10D9 /* ClipboardSugar_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F163AF6323380B89003F10D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163AF6223380B89003F10D9 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		F163AF4B2337ED5A003F10D9 /* RegExSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegExSugarMacOS.framework; path = Carthage/Build/Mac/RegExSugarMacOS.framework; sourceTree = "<group>"; };
 		F163AF4C2337ED5A003F10D9 /* StringSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringSugarMacOS.framework; path = Carthage/Build/Mac/StringSugarMacOS.framework; sourceTree = "<group>"; };
 		F163AF5F2337F52C003F10D9 /* ClipboardSugar_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClipboardSugar_macOS.framework; path = Carthage/Build/Mac/ClipboardSugar_macOS.framework; sourceTree = "<group>"; };
+		F163AF6223380B89003F10D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F163AF172337EAF9003F10D9 /* AppDelegate.swift */,
+				F163AF6223380B89003F10D9 /* Utils.swift */,
 				F163AF192337EAFE003F10D9 /* Assets.xcassets */,
 				F163AF1B2337EAFE003F10D9 /* MainMenu.xib */,
 				F163AF1E2337EAFE003F10D9 /* Info.plist */,
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F163AF182337EAF9003F10D9 /* AppDelegate.swift in Sources */,
+				F163AF6323380B89003F10D9 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
