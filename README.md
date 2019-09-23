@@ -1,8 +1,12 @@
 # CommentStyler
 
-Converts JS-style comment blocks to Obj-c style comment blocks
+##### Converts JS-style comment blocks to Obj-c style comment blocks:
 
 <img width="407" alt="img" src="convert.gif?raw=true">
+
+##### Consolidate parameters:
+
+<img width="303" alt="img" src="consolidate.gif?raw=true">
 
 ### Example:
 
