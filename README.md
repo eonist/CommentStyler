@@ -30,7 +30,7 @@ Converts JS-style comment blocks to Obj-c style comment blocks
 
 ### Todo:
 
-- Figure out how to get the keyboard hi-jacking code to work in modern macOS apps
+- Figure out how to get the keyboard hi-jacking code to work in modern macOS apps ✅
 - Cleanup and refactor
 - Add bulk feature (select folder and convert all .swift files)
 - Add cmd + alt + cmd + 8 command to activate convert call
