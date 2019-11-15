@@ -3,8 +3,8 @@
   "Mac" : [
     {
       "name" : "RegExSugarMacOS",
-      "hash" : "7ca8c94a82f9e8e56a419b68dc2d6c2f58ee6699f70aff9878927b3745c37d21",
-      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+      "hash" : "2b5133d555e9f5f619a14cad6117843e14ed3e618e19a1aa329c14e74bc0bddf",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
 }

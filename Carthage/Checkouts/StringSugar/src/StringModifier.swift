@@ -9,7 +9,7 @@ public class StringModifier {
     }
     /**
      * ## Examples:
-     * splitAtFirst(str: "element=value", delimeter: "=")
+     * splitAtFirst(str: "element=value", delimeter: "=") // (element,value)
      */
     public static func splitAtFirst(str: String, delimeter: String) -> (a: String, b: String)? {
       guard let upperIndex = (str.range(of: delimeter)?.upperBound), let lowerIndex = (str.range(of: delimeter)?.lowerBound) else { return nil }
@@ -33,6 +33,7 @@ public class StringModifier {
     }
     /**
      * - NOTE there is also inline: input.remove(at: input.index(before: input.endIndex))
+     * - Note: There is also: String(str.dropLast(1))
      */
     public static func removeLastChar(_ input: String) -> String {
         let retVal = input[..<input.index(before: input.endIndex)]
