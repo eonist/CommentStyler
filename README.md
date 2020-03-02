@@ -4,9 +4,6 @@
 
 <img width="407" alt="img" src="convert.gif?raw=true">
 
-##### Consolidate parameters:
-
-<img width="303" alt="img" src="consolidate.gif?raw=true">
 
 ### Example:
 
@@ -22,6 +19,31 @@
  ///
 ```
 
+##### Consolidate parameters:
+
+<img width="303" alt="img" src="consolidate.gif?raw=true">
+
+
+### Example:
+
+```swift
+/**
+ * A method that creates circles
+ * - Parameter color: the color of the circle
+ * - Parameter radius: the radius of the circle
+ * - Parameter pivot: the center point of the citcle
+ */
+
+ To:
+
+/**
+ * A method that creates circles
+ * - Parameters:
+ *   - color: the color of the circle
+ *   - radius: the radius of the circle
+ *   - pivot: the center point of the citcle
+ */
+```
 ### Instructions:
 
 1. select and copy the code you want to format
