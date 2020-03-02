@@ -46,9 +46,9 @@
 ```
 ### Instructions:
 
-1. select and copy the code you want to format
-2. click the convert-comment-block button
-3. paste the code
+1. Select and copy the code you want to format
+2. Click the convert-comment-block button
+3. Paste the code
 
 ### Dependencies:
 - [RegExSugar](https://github.com/eonist/RegExSugar)
